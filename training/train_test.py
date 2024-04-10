@@ -5,10 +5,30 @@ import pandas as pd
 # functions to test are imported from train.py
 from train import split_data, train_model, get_model_metrics
 
-"""A set of simple unit tests for protecting against regressions in train.py"""
+"""
+A set of simple unit tests for protecting against regressions in train.py
+"""
 
 
 def test_split_data():
+    """
+    This function tests the split_data function.
+    
+    prints
+    -------
+    The test results.
+    
+    execution
+    ---------
+    test_data: dict
+        The test data.
+        
+    data_df: DataFrame
+        The test data in a DataFrame.
+        
+    data: tuple
+        The split data.
+    """
     test_data = {
         'id': [0, 1, 2, 3, 4],
         'target': [0, 0, 1, 0, 1],
@@ -30,6 +50,20 @@ def test_split_data():
 
 
 def test_train_model():
+    """
+    This function trains the model.
+    
+    execution
+    ---------
+    data: tuple
+        The split data.
+        
+    params: dict
+        The parameters for the model.
+        
+    model: object
+        The trained model.
+    """
     data = __get_test_datasets()
 
     params = {
@@ -47,6 +81,9 @@ def test_train_model():
 
 
 def test_get_model_metrics():
+    """
+    This function tests the get_model_metrics function.
+    """
     class MockModel:
 
         @staticmethod
@@ -64,7 +101,9 @@ def test_get_model_metrics():
 
 
 def __get_test_datasets():
-    """This is a helper function to set up some test data"""
+    """
+    This is a helper function to set up some test data
+    """
     X_train = np.array([1, 2, 3, 4, 5, 6]).reshape(-1, 1)
     y_train = np.array([1, 1, 0, 1, 0, 1])
     X_test = np.array([7, 8]).reshape(-1, 1)

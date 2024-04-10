@@ -1,3 +1,51 @@
+"""
+This YAML configuration specifies the settings for a Kubernetes-based 
+compute type with AKS (Azure Kubernetes Service). 
+
+Arguments
+---------
+
+computeType: AKS
+    The compute type to use for the deployment. In this case, it is AKS.
+
+autoScaler:
+    autoscaleEnabled: True
+        A boolean value that specifies whether the auto-scaling feature is enabled.
+    minReplicas: 1
+        The minimum number of replicas to use.
+    maxReplicas: 3
+        The maximum number of replicas to use.
+    refreshPeriodInSeconds: 10
+        The time interval in seconds to refresh the auto-scaling configuration.
+    targetUtilization: 70
+        The target utilization percentage for auto-scaling.
+
+authEnabled: True
+    A boolean value that specifies whether authentication is enabled.
+
+containerResourceRequirements:
+    cpu: 1
+        The number of CPU cores to use.
+    memoryInGB: 0.5
+        The amount of memory in gigabytes to use.
+
+appInsightsEnabled: True
+    A boolean value that specifies whether Application Insights is enabled.
+
+scoringTimeoutMs: 1000
+    The timeout in milliseconds for scoring requests.
+
+maxConcurrentRequestsPerContainer: 2
+    The maximum number of concurrent requests per container.
+
+maxQueueWaitMs: 1000
+    The maximum time in milliseconds to wait in the queue.
+
+sslEnabled: False
+    A boolean value that specifies whether SSL is enabled.
+"""
+
+
 computeType: AKS
 autoScaler:
     autoscaleEnabled: True

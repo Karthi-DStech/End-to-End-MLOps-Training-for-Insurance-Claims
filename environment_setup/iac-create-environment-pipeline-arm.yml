@@ -1,3 +1,14 @@
+"""
+This YAML file defines the Variable Groups and Values
+that are used in the Azure DevOps Pipeline for connecting 
+the DevOps pipeline to the Azure Machine Learning Workspace 
+and Azure Resource Group using Service Connection via Azure Agents. 
+
+DevOps -> Library -> Variable Groups
+
+"""
+
+
 pr: none
 trigger: none
 
