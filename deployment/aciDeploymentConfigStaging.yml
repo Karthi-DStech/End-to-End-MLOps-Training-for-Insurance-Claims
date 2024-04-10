@@ -1,3 +1,19 @@
+"""
+This YAML configuration specifies the settings for a container-based compute type for ACI (Azure Container Instances).
+
+Arguments
+---------
+
+containerResourceRequirements:
+    cpu: 1
+        The number of CPU cores to use.
+    memoryInGB: 1
+        The amount of memory in gigabytes to use.
+
+computeType: ACI
+    The compute type to use for the deployment. In this case, it is ACI.
+"""
+
 ---
 containerResourceRequirements:
   cpu: 1

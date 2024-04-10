@@ -14,6 +14,29 @@ def register_dataset(
     datastore_name: str,
     file_path: str
 ) -> Dataset:
+    
+    """
+    This function registers a new version of a dataset in the Azure Machine Learning workspace.
+    
+    parameters
+    ----------
+    aml_workspace: Workspace
+        The Azure Machine Learning workspace.
+        
+    dataset_name: str
+        The name of the dataset.
+        
+    datastore_name: str
+        The name of the datastore.
+        
+    file_path: str
+        The path to the file.
+        
+    returns
+    -------
+    dataset: Dataset
+        The registered dataset.
+    """
     datastore = Datastore.get(aml_workspace, datastore_name)
     dataset = Dataset.Tabular.from_delimited_files(path=(datastore, file_path))
     dataset = dataset.register(workspace=aml_workspace,
@@ -24,6 +47,9 @@ def register_dataset(
 
 
 def main():
+    """
+    This function parse the arguments and trains the model and logs the metrics.
+    """
     print("Running train_aml.py")
 
     parser = argparse.ArgumentParser("train")

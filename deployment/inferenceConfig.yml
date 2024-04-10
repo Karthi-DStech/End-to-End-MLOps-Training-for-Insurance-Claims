@@ -1,3 +1,23 @@
+"""
+This YAML configuration specifies the set up for container image inferences using Azure Container Instance.
+
+Arguments
+---------
+
+entryScript: score.py
+    The script that will be used to run the model for predictions.
+
+runtime: python
+    The runtime to use for the script.
+
+condaFile: scoringConfig.yml
+    The Conda environment file that specifies the dependencies for the scoring script.
+
+enableGpu: False
+    A boolean value that specifies whether GPU is enabled.
+"""
+
+
 entryScript: score.py
 runtime: python
 condaFile: scoringConfig.yml
