@@ -2,6 +2,40 @@
 
 Welcome to the End-to-End MLOps Training for Insurance Claims repository! This repository is designed to provide comprehensive training and resources for implementing End-to-End Machine Learning Operations (MLOps) workflow using **Azure Machine Learning and Azure DevOps Platform**.
 
+|-- data/
+| |-- insurance.csv
+|
+|-- deployment/
+| |-- aciDeploymentConfigStaging.yml
+| |-- aksDeploymentConfigProd.yml
+| |-- inferenceConfig.yml
+| |-- score.py
+| |-- scoringConfig.yml
+|
+|-- environment_setup/
+| |-- cloud-environment.json
+| |-- iac-create-environment-pipeline-arm.yml
+|
+|-- package_requirement/
+| |-- install_requirements.sh
+| |-- requirements.txt
+|
+|-- tests/
+| |-- integration/
+| |-- conftest.py
+| |-- prod_test.py
+| |-- staging_test.py
+|
+|-- training/
+| |-- conda_dependencies.yml
+| |-- parameters.json
+| |-- train.py
+| |-- train_aml.py
+| |-- train_insurance.runconfig
+| |-- train_test.py
+|
+|-- parameters.json
+
 - `data/`:
    - `insurance.csv/`: This CSV file contains the data for the MLOps project. This data was taken from the Kaggle and due to the cost efficiency, the study uses a subset of insurance data. 
 
