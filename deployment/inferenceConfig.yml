@@ -1,5 +1,5 @@
 """
-This YAML configuration specifies the set up for container image inferences using Azure Container Instance.
+This YAML configuration specifies the set-up for Azure Kubernetes Services for serving the model as an Endpoint in production. 
 
 Arguments
 ---------
