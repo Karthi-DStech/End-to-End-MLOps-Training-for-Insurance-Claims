@@ -8,7 +8,7 @@ Welcome to the End-to-End MLOps Training for Insurance Claims repository! This r
 - `deployment/`:
    - `aciDeploymentConfigStaging.yml/`: The YAML file contains the scripts for configuring the Azure Container Instance used in the CD Staging Pipeline.
    - `aksDeploymentConfigProd.yml/`: The YAML file contains the scripts for configuring Azure Kubernetes Services used in the CD production Pipeline.
-   - `inferenceConfig.yml/`: The YAML file contains the scripts for configuring the set-up for container image inferences for Azure Container Instance.
+   - `inferenceConfig.yml/`: The YAML file contains the scripts for configuring Azure Kubernetes Services, scripts for running the model and the dependencies needed for the production environment. 
    - `score.py/`: Python file contains scripts for loading the model and set-up for prediction.
    - `scoringConfig.yml/`: The YAML file contains the dependencies for the ACI image. 
 
